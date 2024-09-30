@@ -11,7 +11,7 @@ def create_student(firstname, lastname, email, university):
         db.session.rollback()
         print("Student already exists within the system.")
     else:
-        print("Student: " + firstname + " " + lastname + "has been created")
+        print("Student: " + firstname + " " + lastname + " has been created")
 
 def get_student(id):
     return Student.query.get(id)

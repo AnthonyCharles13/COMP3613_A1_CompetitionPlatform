@@ -3,9 +3,9 @@ from flask import Flask
 from flask.cli import with_appcontext, AppGroup
 
 from App.database import db, get_migrate
-from App.models import User
+from App.models import User, Student, Competition, Result
 from App.main import create_app
-from App.controllers import ( create_user, get_all_users_json, get_all_users, initialize )
+from App.controllers import ( create_user, get_all_users_json, get_all_users, initialize,  create_student)
 
 
 # This commands file allow you to create convenient CLI commands for testing controllers
@@ -67,3 +67,22 @@ def user_tests_command(type):
     
 
 app.cli.add_command(test)
+
+
+'''
+Student Commands
+'''
+
+stu_cli = AppGroup('student', help='Student Object Commands')
+
+@stu_cli.command('create-student', help='Creates a student object')
+def create_student_command():
+    fname = input("Enter students firstname: ")
+    lname = input("Enter students last name: ")
+    email = input("Enter students email: ")
+    Uni = input("Enter students University: ")
+    create_student(fname, lname, email, Uni)
+
+app.cli.add_command(stu_cli)
+
+
