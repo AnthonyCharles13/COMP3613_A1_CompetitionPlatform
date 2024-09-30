@@ -9,7 +9,7 @@ def create_student(firstname, lastname, email, university):
         db.session.commit()
     except IntegrityError as e:
         db.session.rollback()
-        print("Student already exists within the system.")
+        print("Error: Student already exists or email is already taken.")
     else:
         print("Student: " + firstname + " " + lastname + " has been created")
 

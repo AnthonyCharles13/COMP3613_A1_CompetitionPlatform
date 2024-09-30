@@ -5,7 +5,10 @@ from flask.cli import with_appcontext, AppGroup
 from App.database import db, get_migrate
 from App.models import User, Student, Competition, Result
 from App.main import create_app
-from App.controllers import ( create_user, get_all_users_json, get_all_users, initialize,  create_student)
+from App.controllers import ( create_user, get_all_users_json, get_all_users, initialize,
+                            create_student, get_all_students,  
+                            create_competition, get_all_competitions,
+                            add_result, get_results_by_compName, get_results_by_compID)
 
 
 # This commands file allow you to create convenient CLI commands for testing controllers
@@ -83,6 +86,59 @@ def create_student_command():
     Uni = input("Enter students University: ")
     create_student(fname, lname, email, Uni)
 
+@stu_cli.command('list-students', help='Lists all students')
+def list_students_command():
+    print(get_all_students())
+
+
 app.cli.add_command(stu_cli)
 
 
+'''
+Competition Commands
+'''
+
+comp_cli = AppGroup('comp', help='Competition Object Commands')
+
+@comp_cli.command('create-competition', help='Creates a competition object')
+def create_competition_command():
+    name = input("Enter competition name: ")
+    loc = input("Enter competition location: ")
+    date = input("Enter competition date: ")
+    create_competition(name, loc, date)
+
+@comp_cli.command('list-competitions', help='Lists all competitions')
+def list_competitions_command():
+    print(get_all_competitions())
+
+
+app.cli.add_command(comp_cli)
+
+
+
+'''
+Participation/Result Commands
+'''
+
+result_cli = AppGroup('result', help='Result Object Commands')
+
+@result_cli.command('add-result', help='Creates a result object')
+def add_result_command():
+    compId = input("Enter competition ID: ")
+    stuId = input("Enter student ID: ")
+    rank = input("Enter competition ranking: ")
+    score = input("Enter competition score: ")
+    add_result(compId, stuId, rank, score)
+
+@result_cli.command('view-results-ID', help='Lists competition results when given competition ID')
+def view_results_ID_command():
+    Comp_ID = input("Enter the competition ID to view results: ")
+    print(get_results_by_compID(Comp_ID))
+
+@result_cli.command('view-results-name', help='Lists competition results when given competition name')
+def view_results_name_command():
+    Comp_Name = input("Enter the competition name to view results: ")
+    print(get_results_by_compName(Comp_Name))
+
+
+app.cli.add_command(result_cli)
