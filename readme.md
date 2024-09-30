@@ -1,3 +1,49 @@
+# COMP 3613 ASSIGNMENT 1
+## Project Assigned: Competitions Platform
+## Description: An application for students to showcase their participation in coding competitions.
+## Requirements:
+* Create Competition
+* Import competition results from file
+* View competitions list
+* View competition results
+
+# COMMANDS
+## Create a Competition:
+```bash
+$ flask comp create-competition
+```
+
+## View Competitions List:
+```bash
+$ flask comp list-competitions
+```
+
+## Add Result:
+```bash
+$ flask result add-result
+```
+
+## View Competition Results (By Competition ID):
+```bash
+$ flask result view-results-ID
+```
+
+## View Competition Results (By Competition Name):
+```bash
+$ flask result view-results-name
+```
+
+## Create a Student:
+```bash
+$ flask student create-student
+```
+
+## View All Students:
+```bash
+$ flask student list_students
+```
+
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/AnthonyCharles13/COMP3613_A1_CompetitionPlatform)
 <a href="https://render.com/deploy?repo=https://github.com/uwidcit/flaskmvc">
   <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
