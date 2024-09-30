@@ -1,5 +1,6 @@
 from App.models import Competition
 from App.database import db
+from sqlalchemy.exc import IntegrityError
 
 def create_competition(name, location, date):
     new_comp = Competition(name, location, date)

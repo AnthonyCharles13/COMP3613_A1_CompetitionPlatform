@@ -1,5 +1,6 @@
 from App.models import Student
 from App.database import db
+from sqlalchemy.exc import IntegrityError
 
 def create_student(firstname, lastname, email, university):
     newStudent = Student(firstname, lastname, email, university)
