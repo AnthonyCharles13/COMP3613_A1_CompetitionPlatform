@@ -20,14 +20,14 @@ def initialize():
                 student = get_student_by_name(row['First Name'], row['Last Name'])
                 if not student:
                     create_student(row['First Name'], row['Last Name'], row['Email'], row['University'])
-                    new_student = get_student_by_name(row['First Name'], row['Last Name'])
+                    student = get_student_by_name(row['First Name'], row['Last Name'])
 
                 competition = get_competition_by_name(row['Competition Name'])
                 if not competition:
                     create_competition(row['Competition Name'], row['Location'], row['Date'])
-                    new_competition = get_competition_by_name(row['Competition Name'])
+                    competition = get_competition_by_name(row['Competition Name'])
 
-                add_result(new_competition.compID, new_student.stuID, row['Rank'], row['Score'])
+                add_result(competition.compID, student.stuID, row['Rank'], row['Score'])
 
         db.session.commit()
         print("Results successfully imported from file.")

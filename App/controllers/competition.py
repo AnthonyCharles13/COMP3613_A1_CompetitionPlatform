@@ -11,7 +11,7 @@ def create_competition(name, location, date):
         db.session.rollback()
         print("Competition already exists within the system.")
     else:
-        print("Competition: " + name + " has been created")
+        print("Competition " + name + " has been created")
 
 def get_competition(id):
     return Competition.query.get(id)

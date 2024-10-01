@@ -25,7 +25,7 @@ class Result(db.Model):
         }
 
     def __repr__(self):
-        comp_name = self.competition.compName  # Get competition name
-        student_name = f'{self.student.firstName} {self.student.lastName}'  # Get student's full name
+        comp_name = self.competition.compName
+        student_name = f'{self.student.firstName} {self.student.lastName}'
         return f'<Competition: {comp_name} | Student: {student_name} | Rank: {self.rank} | Score: {self.score}>'
 

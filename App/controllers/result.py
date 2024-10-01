@@ -22,7 +22,7 @@ def add_result(comp_id, stu_id, rank, score):
     try:
         db.session.add(newResult)
         db.session.commit()
-        print(f"Result successfully added: Competition ID: {comp_id}, Student ID: {stu_id}, Rank: {rank}, Score: {score}")
+        print(f"Result successfully added: Competition #{comp_id}, StudentID: {stu_id}, Rank: {rank}, Score: {score}")
     except IntegrityError as e:
         db.session.rollback()
         print("Error: Could not add result to system.")
