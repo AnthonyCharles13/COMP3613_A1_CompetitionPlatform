@@ -1,7 +1,11 @@
 First Name,Last Name,Email,University,Competition Name,Location,Date,Rank,Score
-John,Doe,john.doe@mail.com,Massachusetts Institute of Technology,Hackathon 2024,New York,2024-03-01,1,98.5
-Alice,Smith,alice.smith@mail.com,Stanford University,CodeFest 2024,San Francisco,2024-04-15,2,87.0
-Bob,Brown,bob.brown@mail.com,University Of The West Indies,Tech Challenge 2024,Los Angeles,2024-05-10,1,92.0
-Emma,Johnson,emma.johnson@mail.com,Massachusetts Institute of Technology,Hackathon 2024,New York,2024-03-01,3,85.0
-Michael,Davis,michael.davis@mail.com,Stanford University,CodeFest 2024,San Francisco,2024-04-15,2,88.0
-John,Doe,john.doe@mail.com,Massachusetts Institute of Technology,Tech Challenge 2024,Los Angeles,2024-05-10,2,89.0
+John,Doe,john.doe@mit.edu,Massachusetts Institute of Technology,Hackathon World Finals 2024,New York,2024-03-01,1,95.7
+Jane,Doe,jane.doe@stanford.edu,Stanford University,Global CodeFest,San Francisco,2024-04-15,11,79.3
+Tommy,Hilfiger,tommy.hilfiger@uwi.edu,University of the West Indies,International AI Challenge 2024,London,2024-05-10,13,60.0
+Zendeya,Coleman,zendeya.coleman@oxford.edu,University of Oxford,Oxford Deep Learning Symposium,Oxford,2024-02-20,5,81.4
+William,Butcher,william.butcher@harvard.edu,Harvard University,Harvard Hackathon 2024,Boston,2024-01-30,1,90.5
+Antony,Star,antony.star@mit.edu,Massachusetts Institute of Technology,Hackathon World Finals 2024,New York,2024-03-01,2,91.8
+Chris,Tucker,chris.tucker@stanford.edu,Stanford University,Global CodeFest,San Francisco,2024-04-15,7,83.4
+Jackie,Chan,jackie.chan@princeton.edu,Princeton University,Quantum Computing Challenge 2024,Princeton,2024-06-25,2,88.9
+Jarad,Higgins,jarad.higgins@uwi.edu,University of the West Indies,International AI Challenge 2024,London,2024-05-10,6,75.5
+Tom,Holland,tom.holland@oxford.edu,University of Oxford,Oxford Deep Learning Symposium,Oxford,2024-02-20,1,92.6
